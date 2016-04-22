@@ -1,0 +1,32 @@
+      <%= form_for @user, class: "user-form" do |f| %>
+
+
+
+
+        <h2 class="text-center form-title">Register</h2>
+
+        <%= image_tag "new-user.svg", :class => "main-icon-login-c" %>
+        <% if flash[:register_errors] %>
+          <% flash[:register_errors].each do |error| %>
+            <p style="color:red;text-align:center;"><%= error %></p>
+          <% end %>
+        <% end %>
+        <div class="form-group">
+          <%= f.text_field :email, class: "user-input form-control", placeholder: "Email" %>
+        </div>
+        <div class="form-group">
+          <!-- <%= image_tag "tool.svg", :class => "input-icon-login-c" %> -->
+          <%= f.password_field :password, class: "user-input form-control", placeholder: "Password" %>
+        </div>
+        <div class="form-group">
+          <!-- <%= image_tag "key.svg", :class => "input-icon-login-c" %> -->
+          <%= f.password_field :password_confirmation, class: "user-input form-control", placeholder: "Password Conformation" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "CREATE ACCOUNT", class: "btn btn-primary btn-submit form-control" %>
+        </div>
+        <div class="form-group">
+          <p class="text-center"><a href="/login" class="black">Already Have an Account? Login</a><p>
+        </div>
+
+      <% end %>

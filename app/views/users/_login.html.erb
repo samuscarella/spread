@@ -1,0 +1,23 @@
+<%= form_for :session, url: authentication_path, class: "user-form" do |f| %>
+
+
+  <h2 class="text-center form-title">Login</h2>
+    <%= image_tag "man.svg", :class => "main-icon-login-c" %>
+    <% if flash[:login_errors] %>
+        <p style="color:red;text-align:center;margin-bottom:18px;">Invalid Email and/or Password.</p>
+    <% end %>
+  <div class="form-group">
+    <%= f.text_field :email, class: "user-input form-control", placeholder: "Email" %>
+  </div>
+  <div class="form-group">
+    <!-- <%= image_tag "tool.svg", :class => "input-icon-login-c" %> -->
+    <%= f.password_field :password, class: "user-input form-control", placeholder: "Password" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "LOGIN", class: "btn btn-primary btn-submit form-control" %>
+  </div>
+  <div class="form-group">
+    <p class="text-center"><a href="/register" class="black">Don't Have an Account? Register</a><p>
+  </div>
+
+<% end %>

@@ -1,0 +1,239 @@
+<!-- <% if logged_in? -%>Welcome, <%= current_user.email %><% end -%> -->
+<div class="homepage-wrapper">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container header">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <%= image_tag "interface.svg", :id => "navbar-brand-img" %>
+          <a class="navbar-brand logo-title" href="/">Spread<span class="beta-sym">BETA</span></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if current_user %>
+              <li><a href="/dash">Home</a></li>
+              <li><a href="/users/<%= current_user.id %>/profile">Profile</a></li>
+              <li><a href="/logout">Logout</a></li>
+            <% else %>
+              <li><a href="/">Home</a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid main-page-container">
+      <div class="row">
+        <div class="col-md-12 main-column">
+          <div class="container-fluid box-1-cont">
+            <div class="row box-1-row">
+              <div class="box-1-col col-md-8 col-md-offset-2">
+                <h1 class="text-center">Share Data With Efficiency</h1>
+                <h4 class="text-center" style="margin:3%">Upload organized data to be spread across multiple platforms for maximum exposure.</h4>
+                <a data-toggle="modal" data-target="#newBomb" class="btn btn-info new-bomb">+ New Data Bomb</a>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid username-cont">
+            <div class="row username-row">
+              <div class="col-md-12 username-col">
+                <h4 class="dash-subtitle">Recent Spread's</h4>
+                <%= image_tag "square.svg", :class => "social-media-icon" %>
+                <%= image_tag "twitter.svg", :class => "social-media-icon" %>
+                <%= image_tag "linkedin.svg", :class => "social-media-icon" %>
+                <%= image_tag "travel.svg", :class => "social-media-icon" %>
+                <%= image_tag "googleplus.svg", :class => "social-media-icon" %>
+                <%= image_tag "tumblr.svg", :class => "social-media-icon" %>
+                <%= image_tag "instagram.svg", :class => "social-media-icon" %>
+                <%= image_tag "youtube.svg", :class => "social-media-icon" %>
+                <%= image_tag "flickr.svg", :class => "social-media-icon" %>
+                <%= image_tag "note.svg", :class => "social-media-icon" %>
+               </div>
+             </div>
+          </div>
+        </div>
+          <!-- <div class="container-fluid username-cont">
+            <div class="row databombs-row">
+              <div class="col-md-12 databombs-col">
+
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer">
+      <div class="row">
+        <div class="col-md-12 footer-col">
+          <p class="text-center footer-title"><em>Spread &copy; 2016</em></p>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="newBomb" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="text-center modal-title">New Data Spread</h3>
+        </div>
+        <div class="modal-body">
+          <h4 class="text-center">Upload all data to be sent out below.</h4>
+          <form id="bomb-form">
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+            <input name="user_id" value="<%= current_user.id %>" type="hidden">
+            <div class="container-fluid social-ch-cont">
+              <!-- <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <h5 class="header-text">Bomb Name</h5>
+                      <input type="text" class="form-control" id="title" ng-model="bomb.name">
+                    </div>
+                  </div>
+              </div> -->
+              <div class="row social-ch-row">
+                <h5 class="header-text">Social Platforms</h5>
+                  <div class="col-md-1 social-ch-col">
+                    <div class="form-group">
+                      <%= image_tag "square.svg", :class => "social-media-icon" %>
+                      <input type="checkbox" class="data-bomb-checkbox" id="facebook-ch" name="bomb[social]" value="facebook">
+                      <!-- <input type="checkbox" class="data-bomb-checkbox" id="facebook-ch"> -->
+                      <label for="facebook-ch" class="social-label"></label>
+                    </div>
+                  </div>
+                  <div class="col-md-1 social-ch-col">
+                    <div class="form-group">
+                      <%= image_tag "twitter.svg", :class => "social-media-icon" %>
+                      <input type="checkbox"  class="data-bomb-checkbox" id="twitter-ch" name="bomb[social]" value="twitter">
+                      <label for="twitter-ch" class="social-label"></label>
+                    </div>
+                  </div>
+                  <div class="col-md-1 social-ch-col">
+                    <div class="form-group">
+                      <%= image_tag "linkedin.svg", :class => "social-media-icon" %>
+                      <input type="checkbox"  class="data-bomb-checkbox" id="linkedin-ch" name="bomb[social]" value="linkedin">
+                      <label for="linkedin-ch" class="social-label"></label>
+                    </div>
+                  </div>
+                  <div class="col-md-1 social-ch-col">
+                    <div class="form-group">
+                      <%= image_tag "travel.svg", :class => "social-media-icon" %>
+                      <input type="checkbox" class="data-bomb-checkbox" id="pinterest-ch" name="bomb[social]" value="pinterest">
+                      <label for="pinterest-ch" class="social-label"></label>
+                    </div>
+                  </div>
+                  <div class="col-md-1 social-ch-col">
+                    <div class="form-group">
+                      <%= image_tag "googleplus.svg", :class => "social-media-icon" %>
+                      <input type="checkbox"  class="data-bomb-checkbox" id="googleplus-ch" name="bomb[social]" value="googleplus">
+                      <label for="googleplus-ch" class="social-label"></label>
+                    </div>
+                  </div>
+                  <div class="col-md-1 social-ch-col">
+                    <div class="form-group">
+                      <%= image_tag "youtube.svg", :class => "social-media-icon" %>
+                      <input type="checkbox"  class="data-bomb-checkbox" id="youtube-ch" name="bomb[social]" value="youtube">
+                      <label for="youtube-ch" class="social-label"></label>
+                    </div>
+                  </div>
+                  <div class="col-md-1 social-ch-col">
+                    <div class="form-group">
+                      <%= image_tag "tumblr.svg", :class => "social-media-icon" %>
+                      <input type="checkbox"  class="data-bomb-checkbox" id="tumblr-ch" name="bomb[social]" value="tumblr">
+                      <label for="tumblr-ch" class="social-label"></label>
+                    </div>
+                  </div>
+                  <div class="col-md-1 social-ch-col">
+                    <div class="form-group">
+                      <%= image_tag "flickr.svg", :class => "social-media-icon" %>
+                      <input type="checkbox"  class="data-bomb-checkbox" id="flickr-ch" name="bomb[social]" value="flickr">
+                      <label for="flickr-ch" class="social-label"></label>
+                    </div>
+                  </div>
+                  <div class="col-md-1 social-ch-col">
+                    <div class="form-group">
+                      <%= image_tag "reddit.png", :class => "social-media-icon" %>
+                      <input type="checkbox"  class="data-bomb-checkbox" id="reddit-ch" name="bomb[social]" value="reddit">
+                      <label for="reddit-ch" class="social-label"></label>
+                    </div>
+                  </div>
+                  <!-- <div class="col-md-1 social-ch-col">
+                    <div class="form-group">
+                      <img src="static/images/web.svg" alt="WEB" class="social-media-icon"/>
+                      <input type="checkbox" class="data-bomb-checkbox" id="web-ch" ng-model="bomb.social.email">
+                      <label for="web-ch" class="social-label"></label>
+                    </div>
+                  </div> -->
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <h5 class="header-text">Title</h5>
+                        <input type="text" name="bomb[title]" class="form-control" id="title">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <h5 class="header-text">Message</h5>
+                        <textarea name="bomb[message]" class="data-bomb-checkbox form-control" id="body"></textarea>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                      <h5 class="header-text">Images</h5>
+                      <div class="upload-div">
+                      </div>
+                    <div class="form-group">
+                      <%= file_field(:bomb, :images, class: "btn upload-files", accept: 'image/png,image/gif,image/jpeg', :multiple => true) %>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                      <h5 class="header-text">Videos</h5>
+                      <div class="upload-div">
+                      </div>
+                    <div class="form-group">
+                      <%= file_field(:bomb, :video, class: "btn upload-files", accept: "video/mp4,video/x-m4v,video/*") %>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-md-12">
+                      <h5 class="header-text">URL's</h5>
+                      <div class="url-div">
+                        <div class="url-input-cont">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                      <h5 class="header-text">Tags</h5>
+                      <div class="tag-input-cont">
+                      </div>
+                    </div>
+                </div> -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-danger btn-detonate">DETONATE</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>

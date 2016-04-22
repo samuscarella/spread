@@ -1,0 +1,470 @@
+<div class="homepage-wrapper">
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container header">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <%= image_tag "interface.svg", :id => "navbar-brand-img" %>
+        <a class="navbar-brand logo-title" href="/">Spread<span class="beta-sym">BETA</span></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
+            <li><a href="/dash">Home</a></li>
+            <li><a href="/users/<%= current_user.id %>/profile">Profile</a></li>
+            <li><a href="/logout">Logout</a></li>
+          <% else %>
+            <li><a href="/">Home</a></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid main-page-container">
+    <div class="row main-row">
+      <div class="col-md-12 main-column">
+        <div class="container-fluid header-cont">
+          <div class="row header-row">
+            <div class="col-md-12 header-col">
+              <h1 class="text-center">Profile</h1>
+              <h4 class="text-center">Update personal information or add social accounts.</h4>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid label-cont">
+          <div class="row label-row">
+            <div class="col-md-12 label-col">
+              <h3 class="text-center dash-subtitle">User Profile</h3>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid prof-cont">
+          <div class="row prof-row">
+            <div class="col-md-12 prof-col">
+              <h4 class="prof-label">Email: </h4>
+              <h4 class="prof-data"><b><%= current_user.email %></b></h4><br>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid label-cont">
+          <div class="row label-row">
+            <div class="col-md-12 label-col">
+              <h3 class="text-center dash-subtitle">Social Account's</h3>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid prof-cont">
+          <div class="row prof-row" id="facebook-prof-row">
+            <div class="col-md-1">
+              <%= image_tag "square.svg", :class => "social-media-icon-2" %>
+            </div>
+            <div class="col-md-10 second-facebook-col">
+              <h4 class="profile-data social-acc">Facebook</h4>
+              <h5 class="profile-data social-acc-num">Accounts Linked: <span class="facebook-accounts-linked-num">0</span</h5>
+            </div>
+            <div class="col-md-1 third-facebook-col" id="facebook-account-linked-col">
+              <input type="hidden" id="user-id-input" value="<%= current_user.id %>">
+              <!-- <%= link_to '+', 'users/facebook/auth', id: "facebook-link-acc", class: "edit-account-btn btn btn-info" %> -->
+              <a id="facebook-link-acc" class="btn btn-warning edit-account-btn"><%= image_tag "link.svg", :class => "social-media-link" %></a>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid prof-cont">
+          <div class="row prof-row">
+            <div class="col-md-1">
+              <%= image_tag "twitter.svg", :class => "social-media-icon-2" %>
+            </div>
+            <div class="col-md-10 prof-col">
+              <h4 class="profile-data social-acc">Twitter</h4>
+              <h5 class="profile-data social-acc-num">Accounts Linked: 0</h5>
+            </div>
+            <div class="col-md-1">
+              <a id="twitter-link-acc" class="btn btn-warning edit-account-btn"><%= image_tag "link.svg", :class => "social-media-link" %></a>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid prof-cont">
+          <div class="row prof-row">
+            <div class="col-md-1">
+              <%= image_tag "linkedin.svg", :class => "social-media-icon-2" %>
+            </div>
+            <div class="col-md-10 prof-col">
+              <h4 class="profile-data social-acc">Linkedin</h4>
+              <h5 class="profile-data social-acc-num">Accounts Linked: 0</h5>
+            </div>
+            <div class="col-md-1">
+              <a id="linkedin-link-acc" class="btn btn-warning edit-account-btn"><%= image_tag "link.svg", :class => "social-media-link" %></a>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid prof-cont">
+          <div class="row prof-row">
+            <div class="col-md-1">
+              <%= image_tag "travel.svg", :class => "social-media-icon-2" %>
+            </div>
+            <div class="col-md-10 prof-col">
+              <h4 class="profile-data social-acc">Pinterest</h4>
+              <h5 class="profile-data social-acc-num">Accounts Linked: 0</h5>
+            </div>
+            <div class="col-md-1">
+              <a id="pinterest-link-acc" class="btn btn-warning edit-account-btn"><%= image_tag "link.svg", :class => "social-media-link" %></a>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid prof-cont">
+          <div class="row prof-row">
+            <div class="col-md-1">
+              <%= image_tag "googleplus.svg", :class => "social-media-icon-2" %>
+            </div>
+            <div class="col-md-10 prof-col">
+              <h4 class="profile-data social-acc">Google+</h4>
+              <h5 class="profile-data social-acc-num">Accounts Linked: 0</h5>
+            </div>
+            <div class="col-md-1">
+              <a id="google-link-acc" class="btn btn-warning edit-account-btn"><%= image_tag "link.svg", :class => "social-media-link" %></a>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid prof-cont">
+          <div class="row prof-row">
+            <div class="col-md-1">
+              <%= image_tag "youtube.svg", :class => "social-media-icon-2" %>
+            </div>
+            <div class="col-md-10 prof-col">
+              <h4 class="profile-data social-acc">YouTube</h4>
+              <h5 class="profile-data social-acc-num">Accounts Linked: 0</h5>
+            </div>
+            <div class="col-md-1">
+              <a id="youtube-link-acc" class="btn btn-warning edit-account-btn"><%= image_tag "link.svg", :class => "social-media-link" %></a>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid prof-cont">
+          <div class="row prof-row">
+            <div class="col-md-1">
+              <%= image_tag "tumblr.svg", :class => "social-media-icon-2" %>
+            </div>
+            <div class="col-md-10 prof-col">
+              <h4 class="profile-data social-acc">Tumblr</h4>
+              <h5 class="profile-data social-acc-num">Accounts Linked: 0</h5>
+            </div>
+            <div class="col-md-1">
+              <a id="tumblr-link-acc" class="btn btn-warning edit-account-btn"><%= image_tag "link.svg", :class => "social-media-link" %></a>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid prof-cont">
+          <div class="row prof-row">
+            <div class="col-md-1">
+              <%= image_tag "flickr.svg", :class => "social-media-icon-2" %>
+            </div>
+            <div class="col-md-10 prof-col">
+              <h4 class="profile-data social-acc">Flickr</h4>
+              <h5 class="profile-data social-acc-num">Accounts Linked: 0</h5>
+            </div>
+            <div class="col-md-1">
+              <a id="flickr-link-acc" class="btn btn-warning edit-account-btn"><%= image_tag "link.svg", :class => "social-media-link" %></a>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid prof-cont">
+          <div class="row prof-row">
+            <div class="col-md-1">
+              <%= image_tag "reddit.png", :class => "social-media-icon-2" %>
+            </div>
+            <div class="col-md-10 prof-col">
+              <h4 class="profile-data social-acc">Reddit</h4>
+              <h5 class="profile-data social-acc-num">Accounts Linked: 0</h5>
+            </div>
+            <div class="col-md-1">
+              <a id="reddit-link-acc" class="btn btn-warning edit-account-btn"><%= image_tag "link.svg", :class => "social-media-link" %></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid footer">
+    <div class="row">
+      <div class="col-md-12 footer-col">
+        <p class="text-center footer-title"><em>InfoBomb &copy; 2016</em></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="editFacebookAccount" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="text-center modal-title">Facebook</h3>
+        </div>
+        <div class="modal-body">
+          <form>
+            <%= image_tag "square.svg", :class => "social-media-icon-3" %>
+            <div class="form-group">
+              <label for="facebook-username">Username</label>
+              <input type="text" class="form-control" id="facebook-username" ng-model="facebook.username">
+            </div>
+            <div class="form-group">
+              <label for="facebook-password">Password</label>
+              <input type="password" class="form-control" id="facebook-password" ng-model="facebook.password">
+            </div>
+            <div class="form-group">
+              <button class="form-control btn btn-success" id="facebook-update">SAVE</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="editTwitterAccount" role="dialog">
+ <div class="modal-dialog">
+   <!-- Modal content-->
+   <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h3 class="text-center modal-title">Twitter</h3>
+       </div>
+       <div class="modal-body">
+         <form>
+           <%= image_tag "twitter.svg", :class => "social-media-icon-3" %>
+           <div class="form-group">
+             <label for="twitter-username">Username</label>
+             <input type="text" class="form-control" id="twitter-username" ng-model="twitter.username">
+           </div>
+           <div class="form-group">
+             <label for="twitter-password">Password</label>
+             <input type="password" class="form-control" id="twitter-password" ng-model="twitter.password">
+           </div>
+           <div class="form-group">
+             <button class="form-control btn btn-success" id="twitter-update" ng-click="linkTwitter(twitter)">SAVE</button>
+           </div>
+         </form>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+       </div>
+   </div>
+ </div>
+</div>
+<div class="modal fade" id="editLinkedinAccount" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="text-center modal-title">Linkedin</h3>
+        </div>
+        <div class="modal-body">
+          <form>
+            <%= image_tag "linkedin.svg", :class => "social-media-icon-3" %>
+            <div class="form-group">
+              <label for="linkedin-username">Username</label>
+              <input type="text" class="form-control" id="linkedin-username" ng-model="linkedin.username">
+            </div>
+            <div class="form-group">
+              <label for="linkedin-password">Password</label>
+              <input type="password" class="form-control" id="linkedin-password" ng-model="linkedin.password">
+            </div>
+            <div class="form-group">
+              <button class="form-control btn btn-success" id="linkedin-update" ng-click="linkLinkedin(linkedin)">SAVE</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="editPinterestAccount" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="text-center modal-title">Pinterest</h3>
+        </div>
+        <div class="modal-body">
+          <form>
+            <%= image_tag "travel.svg", :class => "social-media-icon-3" %>
+            <div class="form-group">
+              <label for="pinterest-username">Username</label>
+              <input type="text" class="form-control" id="pinterest-username" ng-model="pinterest.username">
+            </div>
+            <div class="form-group">
+              <label for="pinterest-password">Password</label>
+              <input type="password" class="form-control" id="pinterest-password" ng-model="pinterest.password" ng-value="'1234'">
+            </div>
+            <div class="form-group">
+              <button class="form-control btn btn-success" id="pinterest-update" ng-click="linkPinterest(pinterest)">SAVE</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="editGoogleAccount" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="text-center modal-title">Google</h3>
+        </div>
+        <div class="modal-body">
+          <form>
+            <%= image_tag "googleplus.svg", :class => "social-media-icon-3" %>
+            <div class="form-group">
+              <label for="google-username">Username</label>
+              <input type="text" class="form-control" id="google-username" ng-model="google.username">
+            </div>
+            <div class="form-group">
+              <label for="google-password">Password</label>
+              <input type="password" class="form-control" id="google-password" ng-model="google.password">
+            </div>
+            <div class="form-group">
+              <button class="form-control btn btn-success" id="google-update" ng-click="linkGoogle(google)">SAVE</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editTumblrAccount" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="text-center modal-title">Tumblr</h3>
+        </div>
+        <div class="modal-body">
+          <form>
+            <%= image_tag "flickr.svg", :class => "social-media-icon-3" %>
+            <div class="form-group">
+              <label for="tumblr-username">Username</label>
+              <input type="text" class="form-control" id="tumblr-username" ng-model="tumblr.username">
+            </div>
+            <div class="form-group">
+              <label for="tumblr-password">Password</label>
+              <input type="password" class="form-control" id="tumblr-password" ng-model="tumblr.password">
+            </div>
+            <div class="form-group">
+              <button class="form-control btn btn-success" id="tumblr-update" ng-click="linkTumblr(tumblr)">SAVE</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="editYoutubeAccount" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="text-center modal-title">YouTube</h3>
+        </div>
+        <div class="modal-body">
+          <form>
+            <%= image_tag "youtube.svg", :class => "social-media-icon-3" %>
+            <div class="form-group">
+              <label for="youtube-username">Username</label>
+              <input type="text" class="form-control" id="youtube-username" ng-model="youtube.username">
+            </div>
+            <div class="form-group">
+              <label for="youtube-password">Password</label>
+              <input type="password" class="form-control" id="youtube-password" ng-model="youtube.password">
+            </div>
+            <div class="form-group">
+              <button class="form-control btn btn-success" id="youtube-update" ng-click="linkYoutube(youtube)">SAVE</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="editFlickrAccount" role="dialog">
+ <div class="modal-dialog">
+   <!-- Modal content-->
+   <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h3 class="text-center modal-title">Flickr</h3>
+       </div>
+       <div class="modal-body">
+         <form>
+           <%= image_tag "flickr.svg", :class => "social-media-icon-3" %>
+           <div class="form-group">
+             <label for="flickr-username">Username</label>
+             <input type="text" class="form-control" id="flickr-username" ng-model="flickr.username">
+           </div>
+           <div class="form-group">
+             <label for="flickr-password">Password</label>
+             <input type="password" class="form-control" id="flickr-password" ng-model="flickr.password">
+           </div>
+           <div class="form-group">
+             <button class="form-control btn btn-success" id="flickr-update" ng-click="linkFlickr(flickr)">SAVE</button>
+           </div>
+         </form>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+       </div>
+   </div>
+ </div>
+</div>
+<div class="modal fade" id="editRedditAccount" role="dialog">
+<div class="modal-dialog">
+  <!-- Modal content-->
+  <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="text-center modal-title">Reddit</h3>
+      </div>
+      <div class="modal-body">
+          <form>
+            <%= image_tag "reddit.png", :class => "social-media-icon-3" %>
+            <div class="form-group">
+              <label for="reddit-username">Username</label>
+              <input type="text" class="form-control" id="reddit-username" ng-model="reddit.username">
+            </div>
+            <div class="form-group">
+              <label for="reddit-password">Password</label>
+              <input type="password" class="form-control" id="reddit-password" ng-model="reddit.password">
+            </div>
+            <div class="form-group">
+              <button class="form-control btn btn-success" id="reddit-update" ng-click="linkReddit(reddit)">SAVE</button>
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+      </div>
+  </div>
+</div>
+</div>

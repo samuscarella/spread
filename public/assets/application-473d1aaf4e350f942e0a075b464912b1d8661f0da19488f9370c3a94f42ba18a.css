@@ -1,0 +1,691 @@
+/* line 1, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* line 5, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 9, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.navbar {
+  background-color: white;
+  padding: 5px 0;
+}
+
+/* line 13, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+  font-size: 1.5em;
+  color: #2980b9;
+}
+
+/* line 17, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.navbar-default .navbar-nav > li > a {
+  color: black;
+}
+
+/* line 20, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.navbar-default .navbar-nav > li > a:hover {
+  color: #2980b9;
+}
+
+/* line 23, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.main-container {
+  margin-top: 3%;
+  background-color: #141414;
+  padding: 0;
+}
+
+/* line 28, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.main-column {
+  padding: 0;
+}
+
+/* line 31, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.img-center {
+  display: block;
+  margin: 6% auto;
+}
+
+/* line 35, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.title-main {
+  margin: 3% 0 108px;
+  font-size: 3.5em;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+/* line 40, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.footer {
+  background-color: #ecf0f1;
+  padding-top: 1%;
+}
+
+/* line 44, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.footer-col {
+  padding: 0;
+}
+
+/* line 47, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.footer-title {
+  color: black;
+}
+
+/* line 50, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.white {
+  color: white;
+}
+
+/* line 53, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.black {
+  color: black;
+}
+
+/* line 56, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.homepage-wrapper {
+  overflow-x: hidden;
+}
+
+/* line 59, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.user-form {
+  padding: 3% 0;
+}
+
+/* line 62, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.form-container {
+  margin: 6%;
+}
+
+/* line 68, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.form-col {
+  background-color: white;
+  padding: 1% 4% 0% 4%;
+  border-radius: 3px;
+}
+
+/* line 73, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.form-title {
+  margin-bottom: 27px;
+  margin-top: 9px;
+  color: #2980b9;
+}
+
+/* line 79, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+#input-icon-login-1 {
+  position: absolute;
+  left: 45px;
+  top: 93px;
+  width: 21px;
+  height: 21px;
+}
+
+/* line 86, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+#input-icon-login-2 {
+  position: absolute;
+  left: 45px;
+  top: 142px;
+  width: 21px;
+  height: 21px;
+}
+
+/* line 93, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+#input-icon-login-3 {
+  position: absolute;
+  left: 45px;
+  top: 191px;
+  width: 21px;
+  height: 21px;
+}
+
+/* line 100, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+#input-icon-login-4 {
+  position: absolute;
+  left: 45px;
+  top: 240px;
+  width: 21px;
+  height: 21px;
+}
+
+/* line 107, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+#navbar-brand-img {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  right: 124px;
+  top: 6px;
+}
+
+/* line 114, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+#last-social-cont {
+  margin-bottom: 9%;
+}
+
+/* line 117, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.btn-submit {
+  margin: 3% 0 0 0;
+}
+
+/* line 120, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.home-nuke {
+  margin-top: 90px;
+  width: 300px;
+  height: 300px;
+}
+
+/* line 125, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.logo-title {
+  position: relative;
+  left: 36px;
+}
+
+/* line 129, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.dash-subtitle {
+  margin: 1% 9% 1% 0;
+  display: inline-block;
+}
+
+/* line 133, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.new-bomb {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;
+  font-size: 1.4em;
+}
+
+/* line 140, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.box-1-cont {
+  background-color: white;
+  margin: 6% 6% 0 6%;
+  border-radius: 3px;
+}
+
+/* line 145, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.box-1-col {
+  padding: 0;
+}
+
+/* line 148, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.username-cont {
+  background-color: white;
+  margin: 2% 6% .5% 6%;
+  padding: 0 3%;
+  border-radius: 3px;
+}
+
+/* line 154, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.username-col {
+  padding: 0;
+}
+
+/* line 157, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.databombs-cont {
+  background-color: white;
+  margin: 0 6% 6% 6%;
+  padding: 3%;
+  border-radius: 3px;
+}
+
+/* line 163, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.social-media-icon {
+  width: 36px;
+  height: 36px;
+  margin: 1% 2%;
+  display: inline-block;
+}
+
+/* line 169, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.social-media-icon-2 {
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+  display: inline-block;
+}
+
+/* line 175, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.plus-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* line 179, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.table-data {
+  position: relative;
+  left: 15px;
+}
+
+/* line 183, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.header-cont {
+  background-color: white;
+  margin: 6% auto 0 auto;
+  border-radius: 3px;
+  width: 72%;
+  display: block;
+}
+
+/* line 190, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.label-cont {
+  background-color: white;
+  margin: 3% auto .5% auto;
+  display: block;
+  width: 72%;
+  padding: 0 3%;
+  border-radius: 3px;
+}
+
+/* line 198, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.label-col {
+  padding: 0;
+}
+
+/* line 201, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.prof-cont {
+  background-color: white;
+  margin: 0 auto .5% auto;
+  border-radius: 3px;
+  width: 72%;
+  display: block;
+}
+
+/* line 208, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.prof-label {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+/* line 212, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.prof-data {
+  display: inline;
+  margin-left: 2%;
+}
+
+/* line 216, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.prof-col {
+  padding-bottom: 1%;
+}
+
+/* line 219, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.social-acc {
+  /*position: relative;
+  bottom: 9px;*/
+}
+
+/* line 223, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.social-acc-num {
+  font-style: italic;
+}
+
+/* line 226, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.header-text {
+  /*margin-top: 6%;*/
+  font-size: 1.3em;
+}
+
+/*.data-bomb-checkbox {
+  position: relative;
+    left: 9px;
+}*/
+/* line 234, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.social-label {
+  display: inline-block;
+}
+
+/* line 238, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.social-ch-col {
+  margin: 7px;
+}
+
+/* line 241, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.social-ch-row {
+  margin-bottom: 3%;
+}
+
+/* line 244, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.tag-input-cont {
+  border: 1px solid #ccc;
+  padding: 2px 3px;
+  display: inline-block;
+  border-radius: 3px;
+  width: 100%;
+  box-shadow: inset 0px 1px 1px rgba(1, 1, 1, 0.75);
+}
+
+/* line 252, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.tag-input-cont input {
+  display: inline-block;
+  float: left;
+  height: 18px;
+  padding: 0px;
+  font-size: 18px;
+  line-height: 18px;
+  color: black;
+  border: 0px;
+  margin: 2px;
+}
+
+/* line 263, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.tag-input-cont input:focus {
+  outline: 0;
+  box-shadow: 0px;
+}
+
+/* line 267, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.tag-input-cont .input-tag {
+  padding: 2px 4px;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #e3eaf6;
+  display: inline-block;
+  float: left;
+  border-radius: 2px;
+  margin: 2px 5px 2px 0px;
+}
+
+/* line 279, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.tag-input-cont .input-tag .delete-tag {
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0px 2px;
+}
+
+/* line 285, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.tag-input-cont .input-tag .delete-tag:hover {
+  background-color: #96b4d2;
+}
+
+/*.tags-input {
+  width: 90%;
+}*/
+/* line 291, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.close-modal {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 295, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.upload-files, .upload-files:hover {
+  padding: 1px 9%;
+  display: block;
+  margin: 1% auto;
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* line 302, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.upload-arrow {
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+
+/* line 307, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.upload-div {
+  width: 100%;
+  height: 140px;
+  padding-left: 4%;
+  border: solid black 1px;
+  border-radius: 3px;
+  overflow-x: scroll;
+}
+
+/* line 315, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.beta-sym {
+  color: red;
+  font-size: .5em;
+  vertical-align: top;
+}
+
+/* line 321, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.url-div {
+  /*height: 30px;*/
+  /*border: solid 1px black;*/
+  /*background-color: #bdc3c7;*/
+}
+
+/* line 326, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.url-plus-img {
+  width: 18px;
+  height: 18px;
+}
+
+/* line 330, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.btn-add-url, .btn-add-url:hover {
+  padding: 1px 9%;
+  display: block;
+  margin: 1% auto;
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* line 337, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.url-input {
+  margin: 1% 0;
+}
+
+/* line 340, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.url-input-cont {
+  border: 1px solid #ccc;
+  padding: 2px 3px;
+  display: inline-block;
+  border-radius: 3px;
+  width: 100%;
+  box-shadow: inset 0px 1px 1px rgba(1, 1, 1, 0.75);
+}
+
+/* line 348, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.url-input-cont input {
+  display: inline-block;
+  float: left;
+  height: 18px;
+  padding: 0px;
+  font-size: 18px;
+  line-height: 18px;
+  color: black;
+  border: 0px;
+  margin: 2px;
+}
+
+/* line 359, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.url-input-cont input:focus {
+  outline: 0;
+  box-shadow: 0px;
+}
+
+/* line 363, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.url-input-cont .input-url {
+  padding: 2px 4px;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #e3eaf6;
+  display: inline-block;
+  float: left;
+  border-radius: 2px;
+  margin: 2px 5px 2px 0px;
+}
+
+/* line 375, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.url-input-cont .input-url .delete-url {
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0px 2px;
+}
+
+/* line 381, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.url-input-cont .input-url .delete-url:hover {
+  background-color: #96b4d2;
+}
+
+/* line 384, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.thumbnail-img {
+  width: 100px;
+  height: 100px;
+  /*margin-left: 3%;*/
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 391, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.thumbnail-div {
+  display: inline-block;
+  margin: 1%;
+  height: 126px;
+  padding: 1%;
+  border: solid black 1px;
+}
+
+/* line 401, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.file-name {
+  display: block;
+  text-align: center;
+}
+
+/* line 405, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.progress-bar {
+  background-color: Crimson;
+  height: 15px;
+  margin: 1% 0;
+}
+
+/* line 410, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.progress-striped {
+  height: 15px;
+  margin: 1% 0;
+}
+
+/* line 414, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.file-progress {
+  font-size: 12px;
+  position: relative;
+  bottom: 3px;
+}
+
+/* line 419, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.edit-account-btn {
+  padding: 10px;
+}
+
+/* line 422, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.social-acc-edit-pic-cont {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 426, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.social-media-icon-3 {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 432, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.input-icon-login-c {
+  width: 21px;
+  height: 21px;
+}
+
+/* line 436, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.user-input {
+  padding-left: 15%;
+  font-style: italic;
+}
+
+/* line 440, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/users.scss */
+.form-icon-col {
+  padding: 0;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

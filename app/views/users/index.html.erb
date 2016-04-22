@@ -1,0 +1,43 @@
+<div class="homepage-wrapper">
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container header">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <%= image_tag "interface.svg", :id => "navbar-brand-img" %>
+        <a class="navbar-brand logo-title" href="/">Spread<span class="beta-sym">BETA</span></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
+            <li><a href="/dash">Home</a></li>
+            <li><a href="/users/<%= current_user.id %>/profile">Profile</a></li>
+            <li><a href="/logout">Logout</a></li>
+          <% else %>
+            <li><a href="/">Home</a></li>
+            <li><a href="/register">Sign Up</a></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid main-page-container">
+    <div class="row">
+      <div class="col-md-12 main-column">
+        <%= image_tag "war.svg", class: "img-center home-nuke" %>
+        <h1 class="text-center white title-main">Digital Media Marketing Campaigns</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid footer">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-center footer-title">Spread &copy; 2016</p>
+      </div>
+    </div>
+  </div>
+</div>

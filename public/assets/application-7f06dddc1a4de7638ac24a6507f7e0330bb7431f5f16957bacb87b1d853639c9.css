@@ -1,0 +1,610 @@
+/* Base for label styling */
+
+[class="data-bomb-checkbox"]:not(:checked),
+[class="data-bomb-checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[class="data-bomb-checkbox"]:not(:checked) + label,
+[class="data-bomb-checkbox"]:checked + label {
+  position: relative;
+  padding-left: 12px;
+  left: 10px;
+  top: 9px;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[class="data-bomb-checkbox"]:not(:checked) + label:before,
+[class="data-bomb-checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: 2px;
+  width: 17px; height: 17px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+}
+/* checked mark aspect */
+[class="data-bomb-checkbox"]:not(:checked) + label:after,
+[class="data-bomb-checkbox"]:checked + label:after {
+  content: '✘';
+  position: absolute;
+  top: 3px; left: 4px;
+  font-size: 18px;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[class="data-bomb-checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[class="data-bomb-checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[class="data-bomb-checkbox"]:disabled:not(:checked) + label:before,
+[class="data-bomb-checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[class="data-bomb-checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[class="data-bomb-checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[class="data-bomb-checkbox"]:checked:focus + label:before,
+[class="data-bomb-checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted blue;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #4778d9!important;
+}
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background-color: white;
+  padding: 5px 0;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+  font-size: 1.5em;
+  color: #2980b9;
+}
+.navbar-default .navbar-nav > li > a {
+  color: black;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #2980b9;
+}
+.main-container {
+  margin-top: 3%;
+  background-color: #969A97;
+  padding: 0;
+}
+.main-column {
+  padding: 0;
+}
+.img-center {
+  display: block;
+  margin: 6% auto;
+}
+.title-main {
+  margin: 3% 0 108px;
+  font-size: 3.5em;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+.footer {
+  background-color: #ecf0f1;
+  padding-top: 1%;
+}
+.footer-col {
+  padding: 0;
+}
+.footer-title {
+  color: black;
+}
+.white {
+  color: white;
+}
+.black {
+  color: black;
+}
+.homepage-wrapper {
+  overflow-x: hidden;
+}
+.user-form {
+  padding: 3% 0;
+}
+.form-container {
+  margin: 150px 0 200px 0;
+}
+.form-row {
+
+}
+.form-col {
+  background-color: white;
+  padding: 1% 4% 1% 4%;
+  border-radius: 3px;
+}
+.form-title {
+  margin-bottom: 27px;
+  margin-top: 9px;
+  color: #2980b9;
+}
+#input-icon-login-1 {
+  position: absolute;
+    left: 45px;
+    top: 93px;
+  width: 21px;
+  height: 21px;
+}
+#input-icon-login-2 {
+  position: absolute;
+    left: 45px;
+    top: 142px;
+  width: 21px;
+  height: 21px;
+}
+#input-icon-login-3 {
+  position: absolute;
+    left: 45px;
+    top: 191px;
+  width: 21px;
+  height: 21px;
+}
+#input-icon-login-4 {
+  position: absolute;
+    left: 45px;
+    top: 240px;
+  width: 21px;
+  height: 21px;
+}
+#navbar-brand-img {
+  width: 36px;
+  height: 36px;
+  position: relative;
+    right: 124px;
+    top: 6px;
+}
+#last-social-cont {
+  margin-bottom: 9%;
+}
+.btn-submit {
+  margin: 3% 0 0 0;
+}
+.home-nuke {
+  margin-top: 90px;
+  width: 300px;
+  height: 300px;
+}
+.logo-title {
+  position: relative;
+  left: 36px;
+}
+.dash-subtitle {
+  margin: 1% 9% 1% 0;
+  display: inline-block;
+}
+.new-bomb {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0;
+  font-size: 1.4em;
+}
+.box-1-cont {
+  background-color: white;
+  margin: 6% 6% 0 6%;
+  border-radius: 3px;
+}
+.box-1-col {
+  padding: 0;
+}
+.username-cont {
+  background-color: white;
+  margin: 2% 6% .5% 6%;
+  padding: 0 3%;
+  border-radius: 3px;
+}
+.username-col {
+  padding: 0;
+}
+.databombs-cont {
+  background-color: white;
+  margin: 0 6% 6% 6%;
+  padding: 3%;
+  border-radius: 3px;
+}
+.social-media-icon {
+  width: 36px;
+  height: 36px;
+  margin: 1% 2%;
+  display: inline-block;
+}
+.social-media-icon-2 {
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+  display: inline-block;
+}
+.plus-icon {
+  width: 18px;
+  height: 18px;
+}
+.table-data {
+  position: relative;
+  left: 15px;
+}
+.header-cont {
+  background-color: white;
+  margin: 6% auto 0 auto;
+  border-radius: 3px;
+  width: 72%;
+  display: block;
+}
+.label-cont {
+  background-color: white;
+  margin: 3% auto .5% auto;
+  display: block;
+  width: 72%;
+  padding: 0 3%;
+  border-radius: 3px;
+}
+.label-col {
+  padding: 0;
+}
+.prof-cont {
+  background-color: white;
+  margin: 0 auto .5% auto;
+  border-radius: 3px;
+  width: 72%;
+  display: block;
+}
+.prof-label {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.prof-data {
+  display: inline;
+  margin-left: 2%;
+}
+.prof-col {
+  padding-bottom: 1%;
+}
+.social-acc {
+  /*position: relative;
+  bottom: 9px;*/
+}
+.social-acc-num {
+  font-style: italic;
+}
+.header-text {
+  /*margin-top: 6%;*/
+  font-size: 1.3em;
+}
+/*.data-bomb-checkbox {
+  position: relative;
+    left: 9px;
+}*/
+.social-label {
+  display: inline-block;
+}
+
+.social-ch-col {
+  margin: 7px;
+}
+.social-ch-row {
+  margin-bottom: 3%;
+}
+.tag-input-cont {
+  border: 1px solid #ccc;
+  padding: 2px 3px;
+  display: inline-block;
+  border-radius: 3px;
+  width: 100%;
+  box-shadow: inset 0px 1px 1px rgba(1  , 1, 1, 0.75);
+}
+.tag-input-cont input {
+  display: inline-block;
+  float: left;
+  height: 18px;
+  padding: 0px;
+  font-size: 18px;
+  line-height: 18px;
+  color: black;
+  border: 0px;
+  margin: 2px;
+}
+.tag-input-cont input:focus {
+  outline: 0;
+  box-shadow: 0px;
+}
+.tag-input-cont .input-tag {
+  padding: 2px 4px;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #e3eaf6;
+  display: inline-block;
+  float: left;
+  border-radius: 2px;
+  margin: 2px 5px 2px 0px;
+}
+
+.tag-input-cont .input-tag .delete-tag {
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0px 2px;
+}
+.tag-input-cont .input-tag .delete-tag:hover {
+  background-color: #96b4d2;
+}
+/*.tags-input {
+  width: 90%;
+}*/
+.close-modal {
+  display: block;
+  margin: 0 auto;
+}
+.upload-arrow {
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+.upload-div {
+  width: 100%;
+  height: 140px;
+  padding-left: 4%;
+  border: solid black 1px;
+  border-radius: 3px;
+  overflow-x: scroll;
+}
+.beta-sym {
+  color: red;
+  font-size: .5em;
+  vertical-align: top;
+
+}
+.url-div {
+  /*height: 30px;*/
+  /*border: solid 1px black;*/
+  /*background-color: #bdc3c7;*/
+}
+.url-plus-img {
+  width: 18px;
+  height: 18px;
+}
+.btn-add-url, .btn-add-url:hover {
+  padding: 1px 9%;
+  display: block;
+  margin: 1% auto;
+  background-color: #2c3e50;
+  color: white;
+}
+.url-input {
+  margin: 1% 0;
+}
+.url-input-cont {
+  border: 1px solid #ccc;
+  padding: 2px 3px;
+  display: inline-block;
+  border-radius: 3px;
+  width: 100%;
+  box-shadow: inset 0px 1px 1px rgba(1  , 1, 1, 0.75);
+}
+.url-input-cont input {
+  display: inline-block;
+  float: left;
+  height: 18px;
+  padding: 0px;
+  font-size: 18px;
+  line-height: 18px;
+  color: black;
+  border: 0px;
+  margin: 2px;
+}
+.url-input-cont input:focus {
+  outline: 0;
+  box-shadow: 0px;
+}
+.url-input-cont .input-url {
+  padding: 2px 4px;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #e3eaf6;
+  display: inline-block;
+  float: left;
+  border-radius: 2px;
+  margin: 2px 5px 2px 0px;
+}
+
+.url-input-cont .input-url .delete-url {
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0px 2px;
+}
+.url-input-cont .input-url .delete-url:hover {
+  background-color: #96b4d2;
+}
+.thumbnail-img {
+  width: 100px;
+  height: 100px;
+  /*margin-left: 3%;*/
+  display: block;
+  margin: 0 auto;
+}
+.thumbnail-div {
+  display: inline-block;
+  margin: 1%;
+  height: 126px;
+  padding: 1%;
+  border: solid black 1px;
+}
+.file-name {
+  display: block;
+  text-align: center;
+}
+.progress-bar {
+  background-color: Crimson;
+  height: 15px;
+  margin: 1% 0;
+}
+.progress-striped {
+  height: 15px;
+  margin: 1% 0;
+}
+.file-progress {
+  font-size: 12px;
+  position: relative;
+  bottom: 3px;
+}
+.edit-account-btn {
+  padding: 10px;
+}
+.social-acc-edit-pic-cont {
+  display: block;
+  margin: 0 auto;
+}
+.social-media-icon-3 {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto;
+  display: block;
+}
+.input-icon-login-c {
+  width: 21px;
+  height: 21px;
+}
+.user-input {
+  font-style: italic;
+}
+.form-icon-col {
+  padding: 0;
+}
+.btn-detonate {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  margin: 6% 0 3% 0;
+}
+.image-file {
+  width: 100px;
+  height: 100px;
+}
+.bomb_images {
+
+}
+/* line 1, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /Users/stephenmuscarella/Desktop/Personal Projects/spread/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
