@@ -40,6 +40,10 @@ gem 'devise'
 
 gem "attr_encrypted", "~> 3.0.0"
 
+
+gem 'figaro'
+gem 'puma'
+
 gem 'responders', '~> 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -49,6 +53,11 @@ group :development, :test do
   gem 'quiet_assets'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'capistrano'
+   gem 'capistrano3-puma'
+   gem 'capistrano-rails', require: false
+   gem 'capistrano-bundler', require: false
+   gem 'capistrano-rvm'
 end
 
 group :development do
